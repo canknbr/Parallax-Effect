@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var animate1: Bool = false
+    @State var animate2: Bool = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            LinearGradient(colors: [.blue, .red, .pink], startPoint: .top, endPoint: .bottomLeading).edgesIgnoringSafeArea(.all)
         }
-        .padding()
     }
 }
 
